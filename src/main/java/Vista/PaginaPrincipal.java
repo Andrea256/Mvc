@@ -7,7 +7,8 @@ package Vista;
 
 /**
  *
- * @author andreaorjuela
+ *  @author Andrea Orjuela
+ *  @author Juan Camilo Santana
  */
 public class PaginaPrincipal extends javax.swing.JFrame {
 

@@ -12,13 +12,21 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author andreaorjuela
+ * @author Andrea Orjuela
+ * @author Juan Camilo Santana
  */
 public class Controlador implements ActionListener {
 
     Modelo modelo;
     PaginaPrincipal vista;
 
+    /**
+     * Constructor que recibe los parametros necesarios para conectar vista con
+     * el modelo
+     *
+     * @param modelo
+     * @param vista
+     */
     public Controlador(Modelo modelo, PaginaPrincipal vista) {
         this.modelo = modelo;
         this.vista = vista;
@@ -27,6 +35,10 @@ public class Controlador implements ActionListener {
         this.vista.B_resta.addActionListener(this);
     }
 
+    /**
+     * Metodo que centra la pantalla y crea un titulo a la misma.
+     */
+    
     public void inicioPagina() {
 
         vista.setTitle("Modelo MVC");
@@ -34,17 +46,12 @@ public class Controlador implements ActionListener {
 
     }
 
+    /**
+     * Metodo encargado en slecionar que operacion realizar
+     * @param e variable que controla los eventos de los botones
+     */
     public void actionPerformed(ActionEvent e) {
 
-        /*
-        modelo.setNumero1(Integer.parseInt(vista.TF_numero1.getText()));
-        modelo.setNumero2(Integer.parseInt(vista.TF_numero2.getText())); 
-        System.out.println("Entra al controlador");
-        modelo.operacion();
-        modelo.operacionSuma();
-        
-        vista.TF_Resultado.setText(String.valueOf(modelo.getResultadoOperacion()));
-        vista.TF_suma.setText(String.valueOf(modelo.getResultadoSuma()));*/
         int i = 0;
 
         if (e.getSource() == vista.B_suma) {
@@ -70,6 +77,10 @@ public class Controlador implements ActionListener {
         }
     }
 
+    /**
+     * Metodo que suma dos numeros
+     */
+    
     public void suma() {
         modelo.setNumero1(Integer.parseInt(vista.TF_numero1.getText()));
         modelo.setNumero2(Integer.parseInt(vista.TF_numero2.getText()));
@@ -79,6 +90,10 @@ public class Controlador implements ActionListener {
 
     }
 
+    /**
+     * Metodo que multiplica dos numeros
+     */
+    
     public void operacion() {
         modelo.setNumero1(Integer.parseInt(vista.TF_numero1.getText()));
         modelo.setNumero2(Integer.parseInt(vista.TF_numero2.getText()));
@@ -88,6 +103,10 @@ public class Controlador implements ActionListener {
 
     }
 
+    /**
+     * Metodo que resta dos numeros
+     */
+    
     public void resta() {
         modelo.setNumero1(Integer.parseInt(vista.TF_numero1.getText()));
         modelo.setNumero2(Integer.parseInt(vista.TF_numero2.getText()));

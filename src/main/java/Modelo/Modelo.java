@@ -7,7 +7,8 @@ package Modelo;
 
 /**
  *
- * @author andreaorjuela
+ * @author Andrea Orjuela
+ * @author Juan Camilo Santana
  */
 public class Modelo {
 
@@ -15,6 +16,11 @@ public class Modelo {
     private int numero2;
     private int resultadoOperacion;
 
+    /**
+     * Getters y setters
+     *
+     * @return
+     */
     public int getNumero1() {
         return numero1;
     }
@@ -39,18 +45,33 @@ public class Modelo {
         this.resultadoOperacion = resultadoOperacion;
     }
 
+    /**
+     * Metodo que suma dos numeros
+     *
+     * @return resultadoOperacion es el resutado de la operacion
+     */
     public int operacion() {
         this.resultadoOperacion = this.numero1 * this.numero2;
         System.out.println("multiplicacion");
         return this.resultadoOperacion;
     }
 
+    /**
+     * Metodo que multiplica dos numeros
+     *
+     * @return resultadoOperacion es el resutado de la operacion
+     */
     public int operacionSuma() {
         this.resultadoOperacion = this.numero1 + this.numero2;
         System.out.println("suma");
         return this.resultadoOperacion;
     }
 
+    /**
+     * Metodo que resta dos numeros
+     *
+     * @return resultadoOperacion es el resutado de la operacion
+     */
     public int operacionResta() {
         this.resultadoOperacion = ((this.numero1) - (this.numero2));
         System.out.println("resta");

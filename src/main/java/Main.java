@@ -11,7 +11,8 @@ import Vista.PaginaPrincipal;
 
 /**
  *
- * @author andreaorjuela
+ *  @author Andrea Orjuela
+ *  @author Juan Camilo Santana
  */
 public class Main {
     
